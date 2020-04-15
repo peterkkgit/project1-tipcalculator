@@ -3,6 +3,7 @@ body {
     width: 100%;
     margin: 0 auto;
     letter-spacing: 0.5px;
+    font-family: "Open Sans", sans-serif;
 }
 
 h1 {
@@ -34,7 +35,7 @@ label, inputs {
         width: 60%;
         background: url(./images/background_schaste-leto-colorful-balloon-happy-otdykh-vozdushnye-shary.jpg) no-repeat center center fixed;
         background-size: cover;
-        margin-top: 20px;
+        margin-top: 50px;
     }
 
     #container {
