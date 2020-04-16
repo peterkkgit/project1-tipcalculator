@@ -11,16 +11,16 @@
         <h1>Tip Calculator</h1>
         <hr>
         <div>
-            <label>Total Bill:</label>
+            <label>Total Bill ($):</label>
             <input type="text" placeholder="Enter your total bill..." id="billTotal">
         </div>
         <div>
-            <label>Tip:</label>
+            <label>Tip (%):</label>
             <input type="range" value="0" id="tipInput">
             <span id="tipOutput">0</span>
         </div>
         <div>
-            <label>Split (number of people)</label>
+            <label>Split (# of people)</label>
             <input type="range" min="1" max="10" value="1" id="splitInput">
             <span id="splitOutput">0</span>
         </div>
@@ -30,12 +30,25 @@
 
         <div>
             <div>
+                <label>Tip amount (per person):</label><span id="tipEach"></span>
+            </div>
+            <div>
                 <label>New Bill (per person):</label><span id="newBill"></span>
             </div>
             <div>
-                <label>Tip amount (per person):</label><span id="tipEach"></span>
+                <input type="submit" value="Click Me to Save Me &#128540" id="saveButton" onclick="saveFunction();" onmouseover="">
             </div>
+
         </div>
+        <hr>
+
+        <h2>Saved Bills (per person)</h2>
+        <div id="savedContainer">
+            <ul id="theList">
+
+            </ul>
+        </div>
+
     </div>
 
     <script src="script.js">

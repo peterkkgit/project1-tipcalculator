@@ -1,5 +1,5 @@
 body {
-    font-size: 1.2em;
+    font-size: 1.1em;
     width: 100%;
     margin: 0 auto;
     letter-spacing: 0.5px;
@@ -11,14 +11,53 @@ h1 {
 
 }
 
+h2 {
+    text-align: center;
+}
+
 #container {
     padding: 1.5em;
-    background: linear-gradient(-45deg, rgb(245,156,127), rgb(241,89,38));
+    background: linear-gradient(-45deg, rgb(245,156,127), rgb(240, 255, 102));
     border-radius: 10px;
+    line-height: 2em;
+    
+}
+
+#saveButton {
+    width: 100%;
+    font-size: 1.5em;
+    padding: 1em;
+    width: 100%;
+    margin: 0 auto;
+    letter-spacing: 0.5px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    box-shadow: black -5px 5px 5px;
+    border:10px outset rgb(53, 0, 0);
+}
+
+#saveButton:hover{
+    background-color:rgba(180, 0, 0, 0.582);
+}
+
+#newBill {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+
+ul {
+    list-style-type: none;
+    text-align: right;
+}
+
+li:first-child {
+    font-size: 2em;
+    font-weight: bolder;
 }
 
 div {
-    line-height: 2.5em;
+    line-height: 3em;
 }
 
 input[type="text"] {
@@ -27,7 +66,7 @@ input[type="text"] {
 }
 
 label, inputs {
-    width: 100%;
+    width: 90%;
 }
 
 @media(min-width: 700px) {
@@ -45,9 +84,10 @@ label, inputs {
     label, input {
         display: inline-block;
         width: 40%;
+        text-align: left;
     }
 
     div {
-        line-height: 4em;
+        line-height: 2em;
     }
 }
