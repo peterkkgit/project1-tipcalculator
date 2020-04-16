@@ -1,8 +1,8 @@
-function sanitizeDollarInput(num) {
+function checkDollarInput(num) {
     if (isNaN(num)) {
         return 0;
     } else {
-        //num = num.replace(/^[[0-9]+(\.[0-9]{1,2})?$]/gm,"");
+        //num = num.replace(/^[[0-9]+(\.[0-9]{1,2})?$]/gm,""); //review and sanitize properly
         return num;
     }
 }
@@ -13,7 +13,7 @@ document.getElementById('container').onchange = function() {
     tipPercent = document.getElementById("tipInput").value;
     split = document.getElementById("splitInput").value;
     tipValue = bill * (tipPercent/100);
-    newBillEach = (bill + tipValue) / split;
+    newBillEach = (bill + tipValue) / split; //is there a better way than declaring with global scope?
     tipEach = tipValue / split;
     
     document.getElementById("tipOutput").innerHTML = tipPercent + "%";
