@@ -9,7 +9,7 @@ function checkDollarInput(num) {
 
 
 document.getElementById('container').onchange = function() {
-    bill = Number(sanitizeDollarInput(document.getElementById('billTotal').value));
+    bill = Number(checkDollarInput(document.getElementById('billTotal').value));
     tipPercent = document.getElementById("tipInput").value;
     split = document.getElementById("splitInput").value;
     tipValue = bill * (tipPercent/100);
