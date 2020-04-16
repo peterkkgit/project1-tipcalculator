@@ -7,13 +7,14 @@ function sanitizeDollarInput(num) {
     }
 }
 
+
 document.getElementById('container').onchange = function() {
-    var bill = Number(sanitizeDollarInput(document.getElementById('billTotal').value));
-    var tipPercent = document.getElementById("tipInput").value;
-    var split = document.getElementById("splitInput").value;
-    var tipValue = bill * (tipPercent/100);
-    var newBillEach = (bill + tipValue) / split;
-    var tipEach = tipValue / split;
+    bill = Number(sanitizeDollarInput(document.getElementById('billTotal').value));
+    tipPercent = document.getElementById("tipInput").value;
+    split = document.getElementById("splitInput").value;
+    tipValue = bill * (tipPercent/100);
+    newBillEach = (bill + tipValue) / split;
+    tipEach = tipValue / split;
     
     document.getElementById("tipOutput").innerHTML = tipPercent + "%";
     document.getElementById("splitOutput").innerHTML = split;
@@ -25,15 +26,7 @@ document.getElementById('container').onchange = function() {
 var savedBills = [];
 
 function saveFunction() {
-    var bill = Number(sanitizeDollarInput(document.getElementById('billTotal').value));
-    var tipPercent = document.getElementById("tipInput").value;
-    var split = document.getElementById("splitInput").value;
-    var tipValue = bill * (tipPercent/100);
-    var newBillEach = (bill + tipValue) / split;
-    var tipEach = tipValue / split;
-
-    var latestToAdd = newBillEach; //how can I not repeat inside of this function?
-    savedBills.unshift(latestToAdd.toFixed(2));
+    savedBills.unshift(newBillEach.toFixed(2));
     //alert(savedBills[0]);
     var ul = document.getElementById("theList");
     var li = document.createElement("li");
